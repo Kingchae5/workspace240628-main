@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-">
+    <title>Document</title>
+
+    <style>
+        .area{
+            boarder: 1px solid black;
+            width: 500px;
+            height: 100px;
+            background: gainsboro;
+        }
+    </style>
+</head>
+<body>
+    <h1>함수(function)</h1>
+
+    <h3> onclick="test1()">*선언적 함수</h3>
+    <pre>
+        function 함수명([매개변수, 매개변수...]){}
+        함수호출시 실행할 코드;
+           
+    </pre>
+    <button onclick="test()">실행확인</button>"
+    < id="area1" class="area">
+        
+    <script>
+        function test1(){
+            document.querySelector("#area1").innerHTML += "test1()함수 실행됨<hr>";
+        }
+    
+    </script>
+
+    <h3>*익명함수</h3>
+    <pre>
+        변수 | 속성 = function([매개변수...]){
+            함수호출시 실행할 코드;
+
+            [return 결과값;]
+        }
+    </pre>
+
+    <button onclick="testFunk()">실행확인</button>
+    <div id="area" class="area"></div>
+
+    <script>
+        // let testFunck = function(){
+        // document.getElementById("area2")}
+    </script>
+
+
+    <hr>
+
+    <hr2>함수의 매개변수</hr2>
+    <button onclic="text2">실행확인</button>
+    <button>실행확인</button>
+    <button>실행확인</button>
+    <button>실행확인</button>
+    <button>실행확인</button>
+    
+    <br>
+    
+    <div id="area3" class="area"></div>
+    <script>
+        function test2(value){
+            document.getElementById("area3").innerHTML = value1 + " " + value2;
+
+        }
+    </script>
+
+</body>
+</html>

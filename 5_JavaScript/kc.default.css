@@ -1,0 +1,327 @@
+/* 페이지 전체에 적용되는 스타일 */
+body {
+    
+    div{
+        box-sizing: border-box;
+        border: 1px solid black;
+    }
+    /* 화면 전체를 감싸는 div */
+    .wrap{
+        width: 1000px;
+        height: 1000px;
+        margin: auto;
+    }
+
+    /* hread, content, footer */
+    .wrap > div{
+        width: 100%;
+    }
+
+    #header, #footer, #aside{height: 15%;}
+    #navigator{height: 0%;}
+    #content{height: 55%;}
+
+    #header>div, #content>div, #aside>div{height: 100%; float: left;}
+
+    /*20 65 15*/
+    #header_1{width: 15%;}
+    #header_2{width: 65%;}
+    #header_3{width: 15%;}
+
+    /*15 60 20*/
+    #content_1{width: 20%;}
+    #content_2{width: 35%;}
+    #content_3{width: 15%;}
+
+    #aside_1{width: 40%;}
+    #aside_2{width: 60%;}
+
+
+
+
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans KR", sans-serif; /* 기본 글꼴 설정 */
+    font-optical-sizing: auto; /* 글꼴 크기 자동 조정 */
+    font-weight: 400; /* 글꼴 굵기 설정 */
+    font-style: normal; /* 글꼴 스타일 설정 */
+    font-size: 25px; /* 기본 글꼴 크기 설정 */
+}
+
+/* 레이아웃 및 기본 설정 */
+div,
+form,
+input {
+    box-sizing: border-box; /* 레이아웃 계산시 패딩과 보더를 포함 */
+}
+
+ul,
+li,
+ol {
+    list-style: none; /* 리스트 스타일 제거 */
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none; /* 링크의 밑줄 제거 */
+    color: black; /* 링크 글꼴 색상 설정 */
+}
+
+/* 전체 화면을 감싸는 div */
+.wrap {
+    width: 1000px;
+    height: 800px;
+    margin: auto; /* 중앙 정렬 */
+}
+
+/* 헤더, 컨텐츠, 푸터의 공통 설정 */
+.wrap>div {
+    width: 100%;
+}
+
+#header {
+    height: 158px;
+}
+
+#footer {
+    height: 241px;
+}
+
+#navigator {
+    height: 5%;
+}
+
+/* 컨텐츠 영역 설정 */
+#content {
+    width: 100%;
+    height: max-content;
+    min-height: calc(100% - 399px); /* 최소 높이 계산 */
+    display: flex;
+}
+
+/* 헤더와 컨텐츠 내부의 div 요소 설정 */
+#header>div,
+#content>div {
+    height: 100%;
+    float: left;
+}
+
+/* 헤더 내부의 각 영역 크기 설정 */
+#header_1 {
+    width: 20%;
+}
+
+#header_2 {
+    width: 75%;
+}
+
+#header_3 {
+    width: 15%;
+}
+
+/* 컨텐츠 내부의 각 영역 크기 설정 */
+#content_1 {
+    width: 15%;
+}
+
+#content_2 {
+    width: 60%;
+}
+
+#content_3 {
+    width: 25%;
+    height: 40%;
+}
+
+/* 헤더 2번 영역의 검색 폼 위치 설정 */
+#header_2 {
+    position: relative;
+}
+
+#search-form {
+    margin: auto;
+    width: 80%;
+    height: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#search-form>input {
+    height: 100%;
+    float: left;
+}
+
+#search-form>input:nth-child(1) {
+    width: 80%;
+}
+
+#search-form>input:nth-child(2) {
+    width: 20%;
+}
+
+/* 내비게이션 영역 설정 */
+#navigator {
+    width: 1000px;
+    height: 40px;
+}
+
+#navi {
+    height: 100%;
+}
+
+/* 내비게이션 리스트 아이템 설정 */
+#navi>li {
+    float: left;
+    width: 15%;
+    text-align: center;
+    height: 100%;
+}
+
+#navi a {
+    font-size: 18px;
+    font-weight: 900;
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 36px;
+}
+
+#navi a:hover {
+    color: #868686;
+    scale: 1.08;
+}
+
+/* 서브메뉴 숨기기 */
+#navi>li>ul {
+    display: none;
+}
+
+/* 서브메뉴 항목 글꼴 크기 설정 */
+#navi>li>ul a {
+    font-size: 15px;
+}
+
+/* 메인 메뉴 호버 시 서브메뉴 표시 */
+#navi>li>a:hover+ul {
+    display: block;
+}
+
+#navi>li>ul:hover {
+    display: block;
+}
+
+/* 로그인 폼 설정 */
+#login-form {
+    width: 100%;
+    height: 30%;
+}
+
+/* 로그인 폼 내부 요소 설정 */
+#login-form>* {
+    width: 100%;
+}
+
+#login-form-input {
+    height: 80%;
+}
+
+#login-form-input>* {
+    height: 100%;
+    float: left;
+}
+
+/* 로그인 입력 필드 설정 */
+#login-input-id-pwd {
+    width: 65%;
+}
+
+#login-input-id-pwd>input {
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+}
+
+/* 로그인 버튼 설정 */
+#login-input-button {
+    width: 35%;
+}
+
+#login-input-button>input[type="submit"] {
+    width: 100%;
+    height: 100%;
+}
+
+/* 로그인 폼 하단 링크 설정 */
+#login-form-etc {
+    height: 20%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form-etc>a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    margin: 10px;
+}
+
+/* 푸터 설정 */
+#footer>div {
+    width: 100%;
+}
+
+#footer_1 {
+    height: 55px;
+    background: #115aba96;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+#footer_1>a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#footer_2 {
+    height: calc(100% - 55px);
+    background: rgba(214, 215, 214, 0.508);
+}
+
+#footer_2>p {
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#footer_2>p:nth-child(1) {
+    font-size: 14px;
+}
+
+#footer_2>p:nth-child(3) {
+    font-size: 11px;
+}
+
+.custom-img {
+    display: block;           /* 블록 요소로 설정 */
+    width: 200px;             /* 이미지의 너비 설정 */
+    height: 200px;             /* 높이를 자동으로 설정 (이미지 비율 유지) */
+    margin: 0px auto;        /* 위, 아래 20px 여백, 좌우 중앙 정렬 */
+    padding: 10px;            /* 블록 내부 여백 설정 */
+    background-color: #f0f0f0; /* 배경색 설정 (시각적 구분을 위해) */
+    border: 2px solid #333;   /* 테두리 설정 */
+    position: relative;       /* 위치 조정 가능 */
+    top: 300px;                /* 상단에서 50px 아래로 이동 */
+    left: 0%;               /* 좌측에서 30px 오른쪽으로 이동 */
+
+}

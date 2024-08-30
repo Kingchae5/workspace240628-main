@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap" rel="stylesheet">
+    <title>개발 공부 사이트</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #header img {
+            width: 150px;
+            height: auto;
+        }
+
+        #navigator {
+            margin-top: 20px;
+        }
+
+        #navi {
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            background-color: #f8f8f8;
+            list-style: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #navi li {
+            flex: 1;
+            text-align: center;
+        }
+
+        #navi li a {
+            display: block;
+            padding: 15px 0;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        #navi li a:hover {
+            background-color: #ddd;
+        }
+
+        #content {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        #content_1,
+        #content_3 {
+            width: 20%;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+        }
+
+        #content_2 {
+            width: 60%;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            min-height: 400px;
+        }
+
+        #footer {
+            margin-top: 20px;
+            padding: 20px 0;
+            border-top: 1px solid #ccc;
+            text-align: center;
+        }
+
+        #footer p {
+            margin: 5px 0;
+        }
+
+        /* 검색 폼 스타일 */
+        #search-form {
+            display: flex; /* 입력 필드와 버튼을 가로로 배치 */
+            align-items: center; /* 수직 정렬 */
+            margin: auto; /* 가운데 정렬 */
+            width: 100%; /* 폼의 너비를 100%로 설정 */  
+
+        }
+
+        /* 검색어 입력 필드 스타일 */
+        #search-form input[type="text"] {
+            flex: 1; /* 입력 필드가 가능한 모든 공간을 차지하도록 설정 */
+            padding: 10px; /* 내부 여백 추가 */
+            font-size: 16px; /* 글자 크기 설정 */
+            border: 1px solid #ddd; /* 테두리 설정 */
+            border-radius: 4px; /* 테두리의 모서리를 둥글게 설정 */
+            box-sizing: border-box; /* 패딩과 테두리를 포함한 박스 크기 조정 */
+        }
+
+        /* 검색 버튼 스타일 */
+        #search-form input[type="submit"] {
+            padding: 10px 20px; /* 버튼의 내부 여백 설정 */
+            font-size: 16px; /* 버튼의 글자 크기 설정 */
+            background-color: #007bff; /* 버튼 배경색 설정 */
+            color: white; /* 버튼의 글자색 설정 */
+            border: none; /* 버튼의 기본 테두리 제거 */
+            border-radius: 4px; /* 버튼의 모서리를 둥글게 설정 */
+            cursor: pointer; /* 마우스를 올렸을 때 포인터로 변경 */
+        }
+
+        #search-form input[type="submit"]:hover {
+            background-color: #0056b3; /* 버튼에 마우스를 올렸을 때 배경색 변경 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="header">
+            <!-- 로고 이미지 -->
+            <img src="kk/4.jpg" alt="사이트 로고" class="custom-img" />
+            <!-- 검색 폼 -->
+            <form action="" id="search-form">
+                <input type="text" name="search" placeholder="검색어를 입력하세요.">
+                <input type="submit" value="검색">
+            </form>
+        </div>
+
+        <!-- 내비게이션 바 -->
+        <div id="navigator">
+            <ul id="navi">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">백엔드</a></li>
+                <li><a href="#">프론트엔드</a></li>
+                <li><a href="#">자료실</a></li>
+                <li><a href="#">커뮤니티</a></li>
+            </ul>
+        </div>
+
+        <!-- 콘텐츠 영역 -->
+        <div id="content">
+            <div id="content_1">
+                <!-- 왼쪽 사이드바 -->
+                <h3>백엔드 메뉴</h3>
+                <ul>
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">Spring</a></li>
+                    <li><a href="#">Node.js</a></li>
+                    <li><a href="#">Database</a></li>
+                </ul>
+            </div>
+
+            <div id="content_2">
+                <!-- 메인 콘텐츠 -->
+                <h2>프로그래밍 공부를 시작하세요!</h2>
+                <p>배운 언어, 프로그래밍을 정리해두고 복습하세요!</p>
+                <p>whssk 어렵긴해요!</p>
+            </div>
+
+            <div id="content_3">
+                <!-- 오른쪽 사이드바 -->
+                <h3>프론트엔드 메뉴</h3>
+                <ul>
+                    <li><a href="#">HTML/CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">React</a></li>
+                    <li><a href="#">Vue.js</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 푸터 -->
+        <div id="footer">
+            <p>Team Eclipse ｜ KH 정보교육원 ｜ i반 ｜ 공부방 ｜ 대표자 : 최경채 ｜ 책임자 : 최경채</p>
+            <p>강남지원 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F</p>
+            <p>Copyright © 1998-2024 KH Information Educational Institute All Right Reserved</p>
+        </div>
+    </div>
+</body>
+
+</html>
